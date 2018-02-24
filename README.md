@@ -26,4 +26,36 @@ Docker deploying Nginx Mariadb10.x PHP7.2 in one key, support mysql master/slave
     ```
     $ ./mysql_replication.sh
     ``` 
+6. project hierarchy
+   ```
+   +- conf/                   
+   +  - mysql/                mysql conf
+   +    - master/ 
+   +        my.cnf            master db conf
+   +    - slave/
+   +        my.cnf            slave db conf
+   +      my.cnf
+   +    - nginx/
+   +      - conf.d/
+   +          site.conf       nginx conf
+   +        nginx.conf
+   +    - php/
+   +- log/                    
+   +    - mysql/
+   +      - master/
+   +      - slave/
+   +    - nginx/
+   +    - php-fpm/
+   +- mysql/                  mysql data directory
+   +    - master/
+   +    - slave/
+   +- php/
+   +    - php72/
+   +        Dockerfile
+   +        sources.list.stretch
+   +- src/                    php project source root
+   +  docker-compose.yml
+   +  mysql_replication.sh    Mysql master/slave replication deploy script
+   +  Dockerfile
+   ```
 
