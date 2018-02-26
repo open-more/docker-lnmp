@@ -1,2 +1,6 @@
 src/*
 *.log
+mysql/*
+log/mysql/*
+log/nginx/*
+log/php-fpm/*
